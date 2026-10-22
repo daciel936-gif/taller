@@ -1,0 +1,30 @@
+Ejercicio 2: Diferencia entre clase abstracta e interfaz
+
+1. Explicación del concepto
+
+Clase abstracta: una clase que no se puede instanciar (new). Sirve como base para las hijas. Puede tener atributos, métodos con código y métodos abstractos (sin código, que las hijas deben implementar).
+
+Interfaz: un contrato, una lista de métodos que una clase promete tener. En este nivel piensa que no tiene atributos ni lógica, solo las firmas de los métodos.
+
+Clase abstracta | Interfaz
+Palabra clave: abstract class / extends | interface / implements
+Atributos: Sí | No (a este nivel)
+Métodos con código: Sí | No (a este nivel)
+Herencia múltiple: Solo puede heredar de una | Una clase puede implementar varias
+Idea: "Es un tipo de..." | "Sabe hacer..."
+
+2. Análisis del ejercicio
+
+Vehículos, donde algunos se pueden recargar.
+
+Clases: Vehiculo (abstracta), AutoElectrico, Bicicleta.
+Interfaz: Recargable.
+
+Atributos: marca, en Vehiculo, porque todos los vehículos tienen marca.
+
+Métodos:
+moverse() es abstracto en Vehiculo: todos se mueven, pero cada uno de forma distinta.
+mostrarMarca() tiene código en Vehiculo, porque es igual para todos.
+recargar() está en Recargable, porque solo algunos vehículos lo hacen. Una bicicleta no se recarga.
+
+Relaciones: herencia (hijas → Vehiculo) e implementación (AutoElectrico → Recargable).
